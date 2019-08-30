@@ -31,7 +31,7 @@ class SearchResult:
     def __await__(self) -> Generator[Any, None, Lyrics]:
         return self.next().__await__()
 
-    async def __aiter__(self) -> AsyncIterator[Lyrics]:
+    def __aiter__(self) -> AsyncIterator[Lyrics]:
         return self
 
     async def __anext__(self) -> Optional[Lyrics]:
